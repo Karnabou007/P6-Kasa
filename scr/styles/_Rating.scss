@@ -1,0 +1,28 @@
+.rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+    height: 24px;
+    .stars-list {
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+        align-items: center;
+        img {
+            height: 100%;
+        }
+    }
+}
+
+.stars-list__item {
+    display: flex;
+    gap: 10px;
+    height: 100%;
+    @media (max-width: 768px) {
+        height: 18px;
+    }
+    @media (max-width: 480px) {
+        height: 13px;
+    }
+}

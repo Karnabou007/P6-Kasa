@@ -1,0 +1,72 @@
+@import "../styles/utils/variables";
+
+header {
+    padding: 35px 7% 35px 7%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    @media (max-width: 768px) {
+        height: 55px;
+    }
+    @media (max-width: 480px) {
+        padding: 5% 5% 5% 5%;
+        height: 50px;
+    }
+    a:first-child {
+        @media (max-width: 768px) {
+            height: 100%;
+        }
+        @media (max-width: 480px) {
+            width: 50%;
+        }
+    }
+    .logo {
+        height: 100%;
+        width: 100%;
+    }
+    a {
+        color: $main-color;
+        font-size: 24px;
+        font-weight: 500;
+        text-decoration: none;
+        @media (max-width: 480px) {
+            display: flex;
+            justify-content: flex-end;
+        }
+        &.active {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.1em;
+            -webkit-text-underline-offset: 0.1em;
+            -moz-text-underline-offset: 0.1em;
+            -ms-text-underline-offset: 0.1em;
+        }
+    }
+}
+
+nav {
+    width: 250px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    @media (max-width: 768px) {
+        gap: 30px;
+    }
+    @media (max-width: 480px) {
+        gap: 15px;
+        width: fit-content;
+        flex-wrap: wrap;
+    }
+    a {
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
+        @media (max-width: 480px) {
+            min-width: fit-content;
+            font-size: 12px;
+            text-transform:uppercase;
+        }
+    }
+}
